@@ -22,5 +22,5 @@
 ## 验证
 <img src="./imgs/Figure_2.png">  
 我们将刚刚得到的十个点放到show.py中，观察散点图，发现其轨迹类似于本人鼠标移动轨迹。  
-## todo
+todo  
 使用onnxruntime在c++上进行推理
