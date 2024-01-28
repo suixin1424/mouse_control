@@ -19,7 +19,6 @@
 我们将mouse_data.csv用vscode打开，选择一些数据剪切到mouse_data_test.csv中。  
 ## 训练模型
 运行train.py，程序就会开始训练模型。最终我们能看到控制台打印出的一条test数据。是一个dx，dy拟合出的十个点。  
-<img src="./imgs/collect.png"> 
 ## 验证
 我们将刚刚得到的十个点放到show.py中，观察散点图，发现其轨迹类似于本人鼠标移动轨迹。  
 <img src="./imgs/Figure_2.png"> 
