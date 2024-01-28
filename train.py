@@ -1,8 +1,12 @@
+import numpy as np
 import pandas as pd
 import torch
 from torch.utils.data import Dataset, DataLoader
 import torch.nn as nn
 import torch.optim as optim
+import onnxruntime
+import onnx
+from onnxsim import simplify
 
 # 读取CSV文件
 train_csv_path = 'mouse_data.csv'  # 替换为你的CSV文件路径
@@ -86,3 +90,8 @@ for idx, data in enumerate(test_dataloader):
         if idx == len(test_dataloader)-1:
             print(batch_dx_dy[0])
             print(output[0])
+
+model.eval()
+onnx_name = 'mouse.onnx'
+dummy = torch.randn(1, 1, 2)
+torch.onnx.export(model, dummy, onnx_name,verbose=True, input_names=['input'], output_names=['output'])
