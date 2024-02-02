@@ -30,12 +30,10 @@ net = cv::dnn::readNetFromONNX("mouse.onnx");
 if (!net.empty())
 {
   cv::Mat blob(1, 2, CV_32F, cv::Scalar(100, 100));//这里的100，100是输入dx，dy
-  int sizes[] = { 1, 9, 2 };
+  int sizes[] = { 1, 10, 2 };
   cv::Mat mat(3, sizes, CV_32F);
-  std::cout << (mat.cols) << std::endl;
-  std::cout << blob.size << std::endl;
   net.setInput(blob,"input");
-  cv::Mat output = net.forward("output");//输出为1*9*2
+  cv::Mat output = net.forward("output");//输出为1*10*2
   std::cout << output.at<float>(0,8,0) << std::endl;
 
 }
