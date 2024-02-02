@@ -16,9 +16,9 @@ test_csv = pd.read_csv(test_csv_path, header=None)
 
 # 提取dx, dy和标签
 dx_dy_train = train_csv.iloc[:, 0].apply(lambda x: list(map(int, x.split(','))))
-dx_dy_labels_train = train_csv.apply(lambda row: [list(map(int, row[i].split(','))) for i in range(1,10)], axis=1)
+dx_dy_labels_train = train_csv.apply(lambda row: [list(map(int, row[i].split(','))) for i in range(1,11)], axis=1)
 dx_dy_test = test_csv.iloc[:, 0].apply(lambda x: list(map(int, x.split(','))))
-dx_dy_labels_test = test_csv.apply(lambda row: [list(map(int, row[i].split(','))) for i in range(1,10)], axis=1)
+dx_dy_labels_test = test_csv.apply(lambda row: [list(map(int, row[i].split(','))) for i in range(1,11)], axis=1)
 
 # 转换为PyTorch Tensor
 dx_dy_train_tensor = torch.Tensor(dx_dy_train.tolist())
@@ -53,7 +53,7 @@ class SimpleNet(nn.Module):
         super(SimpleNet, self).__init__()
         self.fc1 = nn.Linear(2, 64)
         self.fc2 = nn.Linear(64, 32)
-        self.fc3 = nn.Linear(32, 18)
+        self.fc3 = nn.Linear(32, 20)
 
     def forward(self, input_data):
         x = torch.flatten(input_data, start_dim=1)
@@ -62,7 +62,7 @@ class SimpleNet(nn.Module):
         x = self.fc2(x)
         x = nn.ReLU()(x)
         x = self.fc3(x)
-        return x.view(-1, 9, 2)
+        return x.view(-1, 10, 2)
 
 # 初始化模型、损失函数和优化器
 model = SimpleNet()
