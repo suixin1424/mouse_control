@@ -38,3 +38,16 @@ if (!net.empty())
 
 }
 ```
+## python推理
+
+```python
+from cv2 import dnn
+import numpy as np
+ 
+net = dnn.readNetFromONNX("mouse.onnx")
+matblob = np.array([[100,200]])
+net.setInput(matblob)
+print('input = {}'.format(matblob))
+output = net.forward()
+print('output = {}'.format(output))
+```
