@@ -52,4 +52,4 @@ output = net.forward()
 print('output = {}'.format(output))
 ```
 
-[<img src="https://api.gitsponsors.com/api/badge/img?id=747188444" height="20">](https://api.gitsponsors.com/api/badge/link?p=q/BB3mETtgNDW5RfhCEEnSCbse2u9+3V6Gs+GJd8dTDoW8nixkMhxtSrqKC/Y6BwpkmfULGhM/LTHvxVKn8CNg==)
+[<img src="https://api.gitsponsors.com/api/badge/img?id=747188444" height="20">](https://api.gitsponsors.com/api/badge/link?p=q/BB3mETtgNDW5RfhCEEndb31tfKHUSs/JfjcdwD5IaSvyma3mWnlGqcVG8cPMfpVft3Nlz222boSXGVkKonZ1PVWQPFLaNLdj+LQ9CU0chiDwUKDceiV/+al6CCR0nu9ZB4sRCJ/FCrAzpUe80gNQ==)
