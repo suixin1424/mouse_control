@@ -51,3 +51,5 @@ print('input = {}'.format(matblob))
 output = net.forward()
 print('output = {}'.format(output))
 ```
+
+[<img src="https://api.gitsponsors.com/api/badge/img?id=747188444" height="20">](https://api.gitsponsors.com/api/badge/link?p=q/BB3mETtgNDW5RfhCEEnSCbse2u9+3V6Gs+GJd8dTDoW8nixkMhxtSrqKC/Y6BwpkmfULGhM/LTHvxVKn8CNg==)
